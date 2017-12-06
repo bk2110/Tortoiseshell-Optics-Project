@@ -3,13 +3,16 @@ html {
 	line-height: 1.4;
 }
 
+/*top half section of the webpage*/
+
 .top {
 	background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 31rem;
+	height: 30rem;
 	margin-bottom: 3rem;
+	padding-top: 1rem;
 }
 
 .container {
@@ -60,7 +63,7 @@ li a {
 
 .box {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	background-color: white;
 	border: 1px solid black;
@@ -77,6 +80,8 @@ li a {
 	font-size: 2rem;
 	line-height: 1.2;
 }
+
+/*End top half section of webpage, begin bottom half*/
 
 .services {
 	display: flex;
@@ -121,10 +126,10 @@ li a {
 	margin-left: 3rem;
 }
 
-#truck h5 {
+#truck {
 	margin-left: 3rem;
+	padding-right: 2rem;
 	width: 5rem;
-	height: auto;
 	text-align: center;
 }
 
@@ -153,7 +158,6 @@ li a {
 	background-color: cadetblue;
 	width: 10rem;
 	height: 2rem;
-	border: 1px solid black;
 	font-weight: bold;
 	color: white;
 	font-family: Helvetica;
@@ -184,7 +188,139 @@ footer img {
 	width: auto;
 }
 
+/*End bottom half of webage*/
 
+/*Responsive web design section begins*/
+
+/*Max width below is based on the first breaking point of the browser (close to tablet size)*/
+
+@media only screen and (max-width: 1073px) and (orientation: landscape) {
+	
+	.container {
+		width: 100%;
+	}
+
+	.top {
+		padding-top: 0rem;
+		height: 22rem;
+	}
+
+	.box {
+		margin-top: 5rem;
+		padding: 0.75rem 4rem;
+		margin-right: 2rem;
+		width: auto;
+	}
+
+	.box h1 {
+		font-size: 1.33rem;
+	}
+}
+
+/*Mobile phone responsive media query design*/
+
+@media only screen and (max-width: 480px) {
+	
+	.container {
+		width: 100%;
+	}
+
+	.top {
+		padding-top: 0rem;
+		padding-bottom: 3rem;
+		height: 17rem;
+		background-position: 20%;
+		margin-bottom: 3.77rem;
+	}
+
+	.nav {
+		margin-bottom: 9rem;
+	}
+
+/*How do I replace an element such as the "li" element in the nav bar with "menu" using a media query?*/
+
+
+	li {
+		display: none;
+	}
+
+	.box {
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: auto;
+		height: 2rem;
+		align-items: flex-end;
+	}
+
+	.box h1 {
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.text {
+		font-size: 0.77rem;
+	}
+
+	.services {
+		display: block;
+		height: auto;
+		width: auto;
+		margin-bottom: 3.77rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.serices h5 {
+		margin-top: 1.54rem;
+	}
+
+	#paper {
+		margin: auto;
+	}
+
+	.details {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	#rectangle {
+		width: 100%;
+	}
+
+	.details p {
+		font-size: 0.77rem;
+		margin-top: 1rem;
+		width: 100%;
+	}
+
+	.left {
+		margin-bottom: 2rem;
+		height: auto;
+		width: 100%;
+	}
+
+	.right {
+		margin-top: 2rem;
+		width: 100%;
+	}
+
+	#rectangle {
+		justify-content: center;
+	}
+
+	footer p {
+		display: none;
+	}
+
+	footer {
+		justify-content: center;
+	}
+}
 
 
 
